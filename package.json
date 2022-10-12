@@ -1,0 +1,11 @@
+{
+  "name": "mongooseidautoincrement",
+  "version": "1.0.0",
+  "description": "This is mongoose id autoincrement project for development",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "extend": "^3.0.2"
+  }
+}
