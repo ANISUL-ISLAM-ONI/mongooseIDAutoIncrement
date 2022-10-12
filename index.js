@@ -1,8 +1,9 @@
 // Module Scope
-var mongoose = require('mongoose'),
-extend = require('extend'),
-counterSchema,
-IdentityCounter;
+const mongoose = require('mongoose');
+const extend = require('extend');
+
+let counterSchema;
+let IdentityCounter;
 
 // Initialize plugin by creating counter collection in database.
 exports.initialize = function (connection) {
@@ -33,7 +34,7 @@ exports.plugin = function (schema, options) {
 
   // If we don't have reference to the counterSchema or the IdentityCounter model then the plugin was most likely not
   // initialized properly so throw an error.
-  if (!counterSchema || !IdentityCounter) throw new Error("mongoose-auto-increment has not been initialized");
+  if (!counterSchema || !IdentityCounter) throw new Error("mongoose-id-auto-increment has not been initialized");
 
   // Default settings and plugin scope variables.
   var settings = {
